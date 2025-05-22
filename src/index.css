@@ -2,3 +2,27 @@
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake;
 }
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.bg-gradient-animate {
+  background: linear-gradient(
+    270deg,
+    #7f00ff,
+    #e100ff,
+    #ff007f,
+    #00c6ff,
+    #007fff
+  );
+  background-size: 1000% 1000%;
+  animation: gradientShift 20s ease infinite;
+}
